@@ -1,0 +1,66 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.2)
+    byebug (9.0.6)
+    clap (1.0.0)
+    cuba (3.8.0)
+      rack (>= 1.6.0)
+    cuba-api (0.6.3)
+      cuba (~> 3.1)
+      ixtlan-babel (~> 0.4)
+      multi_json (~> 1.6)
+      safe_yaml (~> 0.8)
+    cucumber (2.4.0)
+      builder (>= 2.1.2)
+      cucumber-core (~> 1.5.0)
+      cucumber-wire (~> 0.0.1)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 4.0)
+      multi_json (>= 1.7.5, < 2.0)
+      multi_test (>= 0.1.2)
+    cucumber-core (1.5.0)
+      gherkin (~> 4.0)
+    cucumber-wire (0.0.1)
+    cutest (1.2.3)
+      clap
+    diff-lcs (1.2.5)
+    gherkin (4.0.0)
+    ixtlan-babel (0.7.0)
+    multi_json (1.12.1)
+    multi_test (0.1.2)
+    rack (2.0.1)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    safe_yaml (0.9.7)
+    sequel (4.42.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  cuba
+  cuba-api
+  cucumber
+  cutest
+  rack
+  rack-test
+  rspec
+  sequel
+
+BUNDLED WITH
+   1.13.7

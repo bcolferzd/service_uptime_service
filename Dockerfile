@@ -1,9 +1,13 @@
 FROM ruby:2.4
+MAINTAINER Brian Colfer "bcolfer@zendesk.com"
 
-RUN mkdir /opt/apps
-RUN git clone https://github.com/zendesk/service_uptime_service.git /opt/apps/service_uptime_service
+ENV REFRESHED_AT 2017-01-11
+
+COPY ./* /opt/apps/service_uptime_service/
 WORKDIR /opt/apps/service_uptime_service
 
-RUN ['bundle', 'install']
+EXPOSE 9292
 
-RUN ['bundle','exec','rackup']
+RUN bundle install
+
+CMD ["bundle", "exec", "rackup"]
