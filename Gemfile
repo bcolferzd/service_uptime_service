@@ -11,6 +11,9 @@ group :development, :test do
   gem 'rspec'
   gem 'cutest'
   gem 'rack-test'
+  gem 'rest-client'
+  gem 'webmock'
+  gem 'service_uptime_client', path: 'client'
 end
 
 group  :test do
