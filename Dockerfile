@@ -1,13 +1,17 @@
 FROM ruby:2.4
 MAINTAINER Brian Colfer "bcolfer@zendesk.com"
 
-ENV REFRESHED_AT 2017-01-11
+ENV REFRESHED_AT 2017-01-13
 
-COPY ./* /opt/apps/service_uptime_service/
-WORKDIR /opt/apps/service_uptime_service
 
-EXPOSE 9292
+WORKDIR /app
 
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
-CMD ["bundle", "exec", "rackup"]
+COPY . /app
+
+#
+EXPOSE 3000
+CMD rake db:migrate && rails server -b 0.0.0.0
