@@ -10,6 +10,8 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
+RUN rake spec
+
 COPY . /app
 
 #
