@@ -1,3 +1,5 @@
-require_relative "up_service"
+# This file is used by Rack-based servers to start the application.
 
-run Cuba
+require_relative 'config/environment'
+
+run Rails.application
