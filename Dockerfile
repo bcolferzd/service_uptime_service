@@ -14,4 +14,4 @@ COPY . /app
 
 #
 EXPOSE 3000
-CMD rake db:migrate && rails server -b 0.0.0.0
+CMD rake db:migrate && rails server -o 0.0.0.0
